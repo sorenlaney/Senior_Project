@@ -27,6 +27,21 @@ features = st.container()
 model_training = st.container()
 
 
+#Needs to be updated, but I think it's something that I want to  keep
+# Using object notation
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
+# Using "with" notation
+with st.sidebar:
+    add_radio = st.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+    )
+
+
 with header:
     st.title('Laney Media Analytics Dashboard')
 
@@ -53,6 +68,7 @@ with col2:
     #video_views = df[['POST DATE & TIME','VIEWS AFTER 48 HRS']]
     #video_views = pd.DataFrame(df['VIEWS AFTER 48 HRS(number)']).head(10)
     #st.bar_chart(video_views)
+    #st.line_chart(data=None, *, x=None, y=None, width=0, height=0, use_container_width=True)
 
     #clickup_data = pd.read_csv('')
 
@@ -60,6 +76,22 @@ with col2:
 
 with features:
     st.header('Best Preforming Content')
+
+    tab1, tab2, tab3 = st.tabs(["TikTok:Kenda.Laney", "TikTok:SMM", "Youtube"])
+
+    with tab1:
+        st.header("TikTok: kenda.laney")
+        st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+
+    with tab2:
+        st.header("TikTok: SMM")
+        st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
+    with tab3:
+        st.header("Youtube: Kenda Laney")
+        st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+
+
 
 
 
