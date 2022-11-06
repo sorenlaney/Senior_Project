@@ -73,7 +73,7 @@ with col2:
 with features:
     st.header('Best Preforming Content')
 
-    tab1, tab2, tab3 = st.tabs(["TikTok:Kenda.Laney", "TikTok:SMM", "Youtube"])
+    tab1, tab2, tab3, tab4 = st.tabs(["TikTok:Kenda.Laney", "TikTok:SMM", "Youtube", "Laney Media Website"])
 
     with tab1:
         st.header("TikTok: kenda.laney")
@@ -87,6 +87,10 @@ with features:
         st.header("Youtube: Kenda Laney")
         st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
+    with tab3:
+        st.header("Laney Media Website")
+        st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+
 
 
 
@@ -95,7 +99,7 @@ with model_training:
     st.header('Predicting Views')
     st.text('In this section you can select the hyperparameters!')
 
-    selection_col, display_col = st.beta_columns(2)
+    selection_col, display_col = st.columns(2)
 
     max_depth = selection_col.slider('What should be the max_depth of the model?', 
     min_value=10, 
