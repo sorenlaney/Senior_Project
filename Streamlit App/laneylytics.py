@@ -17,10 +17,6 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 
 
-
-
-
-
 header = st.container()
 dataset = st.container()
 features = st.container()
@@ -111,11 +107,11 @@ with model_training:
     options=[100,200,300,'No limit'], 
     index=0)
 
-    selection_col.text('Here is a list of features: ')
-    selection_col.write(df.columns)
-    input_feature = selection_col.text_input
-    ('Which feature would you like to input to the model?', 
-    'PULocationID')
+    # selection_col.text('Here is a list of features: ')
+    # selection_col.write(df.columns)
+    # input_feature = selection_col.text_input
+    # ('Which feature would you like to input to the model?', 
+    # 'PULocationID')
 
      
 
