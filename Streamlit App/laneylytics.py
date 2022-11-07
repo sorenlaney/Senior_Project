@@ -87,7 +87,7 @@ with features:
         st.header("Youtube: Kenda Laney")
         st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
-    with tab3:
+    with tab4:
         st.header("Laney Media Website")
         st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
