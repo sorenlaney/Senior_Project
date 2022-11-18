@@ -1,9 +1,37 @@
 # Senior_Project
 
-### Objectives 
+***
 
-- Successfully pull data from ClickUp API
-- Succefully pull Data from Google API
-- Create Database for the data
-- Preform Analysis using views as Target Variable
-- Create Stream Lit App to Display Data
+## Objectives 
+
+- Create Dashboard to Comunicate Internal Company Stats
+- Store data from GA4 and other Sources in Big Query
+- Display Data in a Dashboard 
+- Develop an ML to Predict Something
+
+## Project Ouitline
+
+#### Data Sources 
+- Google Analytics 4 
+- Acuity 
+- Mighty Networks 
+- Kartra
+- Bitly
+- Pipe Drive 
+
+#### Big Query
+
+- Wrangle Data if Necessary 
+- Establish Views 
+- Figure out how to Connect 
+
+#### Power Bi 
+- Connect Power Bi to Big Query Database
+- 
+
+#### Identify ML Unit Target
+- Sales Calls Booked 
+- Sales Closed 
+- Views / Traffic
+
+
