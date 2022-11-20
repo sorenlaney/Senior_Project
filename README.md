@@ -39,6 +39,7 @@
 
 ***
 
-- Research Links
+### Research Links
 
-[Time Series Prediction Website Traffic](https://www.analyticsvidhya.com/blog/2021/09/web-traffic-forecasting-using-deep-learning/)
+-[Time Series Prediction Website Traffic](https://www.analyticsvidhya.com/blog/2021/09/web-traffic-forecasting-using-deep-learning/)
+-[Predicting if a Website User will become a Lead](https://towardsdatascience.com/forecasting-with-web-traffic-data-6681ff148df0)
