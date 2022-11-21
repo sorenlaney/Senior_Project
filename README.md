@@ -43,3 +43,4 @@
 
 -[Time Series Prediction Website Traffic](https://www.analyticsvidhya.com/blog/2021/09/web-traffic-forecasting-using-deep-learning/)<br>
 -[Predicting if a Website User will become a Lead](https://towardsdatascience.com/forecasting-with-web-traffic-data-6681ff148df0)<br>
+-[Get multiple dates from GA4 in SQL](https://www.youtube.com/watch?v=c4xPY-hEkBg&list=PLGXZC1nQpK7cRjJn15ksQZLd3BJ_5CYq9&index=2)<br>
