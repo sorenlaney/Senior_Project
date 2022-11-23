@@ -46,3 +46,5 @@
 -[Get multiple dates from GA4 in SQL](https://www.youtube.com/watch?v=c4xPY-hEkBg&list=PLGXZC1nQpK7cRjJn15ksQZLd3BJ_5CYq9&index=2)<br>
 -[Set up GA4 Event](https://www.youtube.com/watch?v=jvuGjPlzIr8)<br>
 -[SQL Queries for GA4 Metrics that aren't imported](https://www.ga4bigquery.com/sessions-dimensions-metrics-ga4/)<br>
+-[Docuementation for BigQuery API](https://cloud.google.com/bigquery/docs/reference/storage/libraries#client-libraries-install-python)<br>
+-[Bigquery API reference PAge](https://cloud.google.com/bigquery/docs/reference/storage)<br>
