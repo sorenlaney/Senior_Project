@@ -48,3 +48,4 @@
 -[SQL Queries for GA4 Metrics that aren't imported](https://www.ga4bigquery.com/sessions-dimensions-metrics-ga4/)<br>
 -[Docuementation for BigQuery API](https://cloud.google.com/bigquery/docs/reference/storage/libraries#client-libraries-install-python)<br>
 -[Bigquery API reference PAge](https://cloud.google.com/bigquery/docs/reference/storage)<br>
+-[Bigquery Authentication Information](https://cloud.google.com/docs/authentication/provide-credentials-adc)<br>
