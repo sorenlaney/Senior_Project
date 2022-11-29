@@ -49,3 +49,4 @@
 -[Docuementation for BigQuery API](https://cloud.google.com/bigquery/docs/reference/storage/libraries#client-libraries-install-python)<br>
 -[Bigquery API reference PAge](https://cloud.google.com/bigquery/docs/reference/storage)<br>
 -[Bigquery Authentication Information](https://cloud.google.com/docs/authentication/provide-credentials-adc)<br>
+-[Pitching an Idea](https://www.ryrob.com/how-to-pitch/)<br>
