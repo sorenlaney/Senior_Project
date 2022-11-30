@@ -1,0 +1,27 @@
+
+
+---
+title: "The challenges of Predictive Analytics in organic content marketing"
+author: "Soren Laney"
+date: "2022-09-28"
+categories: [Daily Blog]
+---
+
+In the world of marketing there are many ways to detirmine your return on investment(ROI). This is something that every busniess wants to know and understand when they commit their resources to their marketing team. This becomes very difficult to measure though when money is directly spent on marketing efforts and even harder when there isn't a good way to track the direct return on money spent on the investment. 
+
+
+![](image.jpeg)
+
+    This post will explore the options to tracking these analytics that businesses depend on day to day. 
+
+
+Where are these analytics difficult to track?
+
+It becomes increasingly difficult to track these metrics when businesses utilize organic content marketing to reach their audiences. Organic content marketing is where a business generates content around their brand that they post on social media. This content is then viewed naturally/organically by the users of that social media platform. The bonuses to this type of marketing is that your only direct cost is the production of the content, compared to paids ads where you have to produce the content and then pay ad rates to promote it. The issue with organic marketing in this manner is that there are not alot of analytics you can get from a social media platform. These analytics are also not tied to a dollar amount making it difficult to track a businesses ROI. 
+
+The next hurdle is the fact that if you  are running paid ads on a social media platform your ads/posts will usally have a direct link going to your sales page or shop page. these links can have individual tracking links and most social platforms will also track link clicks and clicks by campaign to compare the effectives of different ad camgpains. When posting content organcially, you don't have a direct link on your post. Someone finds your sales page by first seeing your post, then navigating to your profile page and then clicking the link in there bio. That is a lot of steps to get someone to your sales page and with that you don't get any analytics to show for it. This is another huge challenge that organic content marketers face in tracking the sales they drive from their organic marketing. 
+
+So why would a business decide to do organic marketing? It is because these strategies prove to be higly effective, espicially for small business that don't have large ad budgets. It is also one of the fastest ways that you can build a brand and connect with your customers while being exposed to new customers simotameously. 
+
+To conclude, their is a huge need for a better way to track the ROI of organic content marketing and to recieve further insights on customer behaviors and how content is preforiming.
+

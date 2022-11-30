@@ -1,0 +1,110 @@
+---
+title: "Windows Functions 101: What you need to know"
+author: "Soren Laney"
+date: "2022-11-04"
+categories: [Daily Blog]
+---
+
+## Windows Overview
+
+![](Windows.png)
+
+Windows functions are great for visualizing data and extracting insights that cannot be gathered through grouby and multi groupby fuinctions. To further understand this we will use the following dataset to compare the differnece and function of groupby and windows functions. This is an example dataset that shows how many hours that employees clocked during a week (it was a slow week). The example code will also be given in pyspark. 
+
+ 
+   |    employee     | branch     | Hrs    |
+   |-----------------|------------|--------|
+   | Jake Ballard    | 1          | 10     |
+   | Olivia Pope     | 1          | 19     |
+   | Fitz Gerald     | 1          | 8      |
+   | Cyrus Bean      | 1          | 9      |
+   | Melly Grant     | 2          | 16     |
+   | Harrison Right  | 2          | 15     |
+   | Elizabeth North | 2          | 9      |
+   | Quin Perkins    | 3          | 15     |
+   | Aby Wheelend    | 3          | 12     |
+   | Markus Walker   | 3          | 6      |
+
+
+ #### Groupby
+ roupby functions opperate by summarizing data according to a specified group. I this example we will grouby the hours worked in each brand and then sumarize that data by taking the average of each group. This is often much faster than a windows due to the simplicity and is avaliability in most programing languages. A groupby would yield the following result from running the following code. 
+
+ ```
+df.groupBy("branch").avg("Hrs").show(truncate=False)
+ ```
+
+   
+   | branch     | Avg Hrs   |
+   |------------|-----------|
+   | 1          | 11.5      |
+   | 2          | 13.3      |
+   | 3          | 11        |
+  
+#### Windows
+When preforming a windows function you can attain aggragate functions without loosing the the rows. This can be very useful when trying to create a new dataframe. An example of how this dataframe could provide more value than a groupby is if you wanted to display a double bar chart comparing the average hours worked in a branch to that of the hours worked by an individual employee. This function has two main parts, a partition and a relational grouped dataset. The first term is what it will partition the dataset into to create the new term/column. The second term can be one of couple of functions that can transform the data. You can then create a new column aggregating the function with that "window" that was created as demonstrated below. A windows functions yields the following result
+```
+Window.partitionBy("branch").orderBy("hrs")
+df.withColumn("Avg Hrs",avg.over(windowSpec))
+df.withColumn("row_number",row_number.over(windowSpec))
+```
+  
+   |    employee     | branch     | Hrs    | Avg Hrs   |
+   |-----------------|------------|--------|-----------|
+   | Quin Perkins    | 3          | 15     | 11        |
+   | Aby Wheelend    | 3          | 12     | 11        |
+   | Markus Walker   | 3          | 6      | 11        |
+   | Olivia Pope     | 1          | 19     | 11.5      |
+   | Jake Ballard    | 1          | 10     | 11.5      |
+   | Fitz Gerald     | 1          | 8      | 11.5      |
+   | Cyrus Bean      | 1          | 9      | 11.5      |
+   | Melly Grant     | 2          | 16     | 13.3      |
+   | Harrison Right  | 2          | 15     | 13.3      |
+   | Elizabeth North | 2          | 9      | 13.3      |
+
+ 
+
+
+## History
+The windows function originates as a SQL function, however has made it way into many other programming languages over the last couple of years. This function was introduced in 2003. Added functionalty was introduced later on. 
+
+
+
+## Example Code 
+
+#### SQL 
+
+```
+SELECT	
+		RANK() OVER (PARTITION BY Value_1 ORDER BY Value_2 DESC) 
+			AS Value_1_ranking,
+		Column_1,
+		Column_2, 
+		Column_3, 
+		Column_4
+FROM df;
+```
+
+#### Pyspark
+
+```
+Window.partitionBy("value_1").orderBy("value_2")
+```
+***
+
+## Other Articles on Windows Function 
+
+#### Blog Articles 
+
+- [BYUI Big Data Windows]('https://github.com/byuibigdata/spark_guide/blob/main/aggregate_calculations.md')
+- [Apache Drill Article]('https://drill.apache.org/docs/sql-window-functions-introduction/#:~:text=Window%20functions%20operate%20on%20a,to%20calculate%20the%20returned%20values.')
+- [SQL Windows Functions]('https://towardsdatascience.com/a-guide-to-advanced-sql-window-functions-f63f2642cbf9')
+- [Wikipedia on SQL]('https://en.wikipedia.org/wiki/Window_function_(SQL)')
+- [Geeks for Geeks SQL Windows Function]('https://www.geeksforgeeks.org/window-functions-in-sql/')
+
+https://www.geeksforgeeks.org/window-functions-in-sql/
+
+#### Docuementations 
+
+- [Pyspark Docuementation]('https://sparkbyexamples.com/spark/spark-sql-window-functions/')
+- [SQL DOcuementation(Mode)]('https://mode.com/sql-tutorial/sql-window-functions/')
+- [R Docuementation]('https://cran.r-project.org/web/packages/dplyr/vignettes/window-functions.html')
