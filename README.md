@@ -70,6 +70,7 @@
 
 ### Languages 
 - SQL 
+    [SQL Union](https://www.w3schools.com/sql/sql_union.asp)
 
 ### Apps 
 - Sreamlit 
