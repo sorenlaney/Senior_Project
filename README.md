@@ -69,8 +69,9 @@
 
 
 ### Languages 
-- SQL 
-    [SQL Union](https://www.w3schools.com/sql/sql_union.asp)
+- SQL <br>
+    [SQL Union](https://www.w3schools.com/sql/sql_union.asp)<br>
+    [SQL Wildcard Tables](https://cloud.google.com/bigquery/docs/querying-wildcard-tables)<br>
 
 ### Apps 
 - Sreamlit 
