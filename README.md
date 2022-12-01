@@ -73,6 +73,7 @@
     [SQL Union](https://www.w3schools.com/sql/sql_union.asp)<br>
     [SQL Wildcard Tables](https://cloud.google.com/bigquery/docs/querying-wildcard-tables)<br>
     [SQL Destruct a Struct](https://docs.ksqldb.io/en/latest/how-to-guides/query-structured-data/)<br>
+    [SQL Destruct a struct Example](https://firebase.blog/posts/2017/03/bigquery-tip-unnest-function)<br>
 
 ### Apps 
 - Sreamlit 
