@@ -1,4 +1,27 @@
-# Senior_Project
+# Soren Laney's Senior Project
+***
+# Course Objectives 
+
+1) Integrate previously learned material in a novel application area of data science.
+2) Complete a significant project using data science methods and principles.
+3) Present results of your project in a professional forum or to a business client.
+4) Document your data science journey and skills through a blog.
+5) Leverage modern data science tools to share your work (e.g. GitHub)
+
+***
+# Requirements 
+
+### Blog
+
+[Soren Laney's Blog](https://sorenlaney.github.io/)
+
+[Github Repo](https://github.com/sorenlaney/SorenLaney.github.io.git)
+
+### Resume 
+
+[Soren Laney's Resume](https://sorenlaney.github.io/laney_s_resume/)
+
+### Senior Project 
 
 ***
 
@@ -34,6 +57,27 @@
 - Sales Closed 
 - Views / Traffic
 
+***
+# Packages, Skills & Libraries Learned
+
+### Api's
+- TikTok Api
+- ClickUp Api
+- Google Api
+
+### Libraries
+
+
+### Languages 
+- SQL <br>
+    [SQL Union](https://www.w3schools.com/sql/sql_union.asp)<br>
+    [SQL Wildcard Tables](https://cloud.google.com/bigquery/docs/querying-wildcard-tables)<br>
+    [SQL Destruct a Struct](https://docs.ksqldb.io/en/latest/how-to-guides/query-structured-data/)<br>
+    [SQL Destruct a struct Example](https://firebase.blog/posts/2017/03/bigquery-tip-unnest-function)<br>
+
+### Apps 
+- Sreamlit 
+- Tableau 
 
 
 
