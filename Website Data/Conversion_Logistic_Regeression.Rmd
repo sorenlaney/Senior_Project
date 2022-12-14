@@ -1,0 +1,120 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(mosaic)
+library(tidyverse)
+library(pander)
+```
+
+```{r}
+df <- read.csv("~/Desktop/BYUI/Fall Semester 2022/DS 499 Senior Project/Senior_Project/Website Data/session_duration_2.csv")%>% 
+  replace(is.na(.), 0) %>% 
+  filter(engagement_time_seconds < 150)
+df %>% 
+  head(5)
+```
+
+
+```{r}
+# Get data aggregated
+df_aggregated_1 <- df %>% 
+  select(user_pseudo_id, item_name)
+
+df_aggregated_2 <- filter(df_aggregated_1, item_name == 'Traffic to Income™ Application interview' | item_name == 'Black Friday TTI Admissions')
+```
+
+
+
+```{r}
+df_final <- merge(df, df_aggregated_2, by = 'user_pseudo_id', all.x = TRUE) %>% 
+  replace(is.na(.), 0) 
+df_final %>% 
+  head(5)
+```
+
+
+```{r}
+
+
+df_final_1 <- df_final %>% 
+  mutate(
+    conversion = case_when(
+      item_name.y == "Traffic to Income™ Application interview" ~ 1,
+      item_name.y == "Black Friday TTI Admissions" ~ 1,
+      item_name.y == "Coaching Call" ~ 1,
+      item_name.y == "Coaching Call" ~ 1,
+      item_name.y == "Coaching with Brenda" ~ 1,
+      item_name.y == "0" ~ 0
+    )
+  ) 
+ 
+  
+
+
+```
+
+
+
+```{r}
+glm <- glm(conversion ~ engagement_time_seconds, data=df_final_1, family=binomial)
+summary(glm) %>% 
+  pander()
+
+glm_2 <- glm(conversion ~ engagement_time_seconds + session_engaged, data=df_final_1, family=binomial)
+summary(glm_2) %>% 
+  pander()
+```
+
+```{r}
+plot(conversion ~ engagement_time_seconds, data=df_final_1, pch=16, col=rgb(.2,.2,.2,.2),
+     main="Website Traffic Conversion",
+     xlab="Session Duration", ylab="Books a Sales Call")
+b <- coef(glm)
+curve(exp(b[1] + b[2]*x)/(1 + exp(b[1] + b[2]*x)), add=TRUE, col="firebrick")
+
+
+legend(x = "topright", box.col = "black",
+       bg ="grey", box.lwd = 2 , title="EQUATIONS",
+       legend=c("Conversions"),
+       fill = c("firebrick"))
+```
+
+
+
+```{r}
+plot(conversion ~ engagement_time_seconds, data=df_final_1, pch=16, col=rgb(.2,.2,.2,.2),
+     main="Predicting Website User Conversion",
+     xlab="User Session Duration", ylab="Converted to Lead")
+b <- coef(glm_2)
+X_2 = 0
+curve(exp(b[1] + b[2]*x + b[3]*X_2)/(1 + exp(b[1] + b[2]*x + b[3]*X_2)), add=TRUE, col="forestgreen")
+X_2 = 1
+curve(exp(b[1] + b[2]*x + b[3]*X_2)/(1 + exp(b[1] + b[2]*x + b[3]*X_2)), add=TRUE, col="firebrick")
+legend(x = "topleft", box.col = "black",
+       bg ="grey", box.lwd = 2 , title="EQUATIONS",
+       legend=c("Non-Engageed Session", "Engagged Session"),
+       fill = c("firebrick","forestgreen"), 
+       inset = c(0.0, 0.1))
+```
+
+
+
+
+```{r}
+
+
+
+plot <- ggplot( df_final_1, aes(x=engagement_time_seconds, y=conversion)) +
+  geom_point() +
+  geom_smooth(method = "glm", 
+    method.args = list(family = "binomial"), 
+    se = FALSE)  +
+  ggtitle("Web Traffic Conversion Logistic Regression") +
+  xlab("Session Duration") + ylab("Booked a Sales Call")
+plot
+
+```
+
